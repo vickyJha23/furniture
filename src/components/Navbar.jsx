@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faShoppingCart, faChevronDown, faTimes, faBars, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faShoppingCart, faChevronDown, faTimes, faBars, faAngleRight, faAngleLeft, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 
 // components import here
@@ -38,25 +38,23 @@ const Navbar = () => {
          })
     }
     const handleSecondAside = () => {
-        console.log("fdsfsffss");
          setIsSecondAsideOpen((lastState) => !lastState)
     }
     const handleThirdAside = () => {
             setIsThirdAsideOpen((lastState) => !lastState)
     }
 
-
     return (
-        <nav className='font-nunito flex items-center w-full h-[80px]'>
+        <nav className='font-nunito flex items-center w-full py-6 mb-[80px] md:mb-[30px]'>
             <section className='flex justify-between w-full items-center px-4'>
                 <Logo />
-                <ul className='hidden md:flex items-center tracking-[3px] font-semibold text-lg'>
-                    <li className='py-4 px-4 transition-all duration-200 uppercase ease-linear delay-150 hover:text-orange-500'>
+                <ul className='hidden lg:flex items-center tracking-[3px] font-semibold text-lg'>
+                    <li className='px-4 transition-all duration-200 uppercase ease-linear delay-150 hover:text-orange-500'>
                         <Link to="/">
                             Home
                         </Link>
                     </li>
-                    <li onClick={handleDropDown} className='py-4 px-4 relative uppercase ease-linear delay-150'>
+                    <li onClick={handleDropDown} className='px-4 relative uppercase ease-linear delay-150'>
                         <span className='transition-all duration-200 hover:text-orange-500'> Pages <FontAwesomeIcon icon={faChevronDown} /></span>
                         {
                             isDropdownOpen && <ul className='absolute normal-case space-y-4 top-16 px-6 py-4 w-[200px] bg-white shadow border-t-[4px] border-t-orange-400'>
@@ -93,41 +91,46 @@ const Navbar = () => {
                             </ul>
                         }
                     </li>
-                    <li className='py-4 px-4 uppercase transition-all duration-200 ease-linear delay-150 hover:text-orange-500'>
+                    <li className='px-4 uppercase transition-all duration-200 ease-linear delay-150 hover:text-orange-500'>
                         <Link to="/collections">
                             Shop
                         </Link>
                     </li>
-                    <li className='py-4 px-4 uppercase transition duration-200 ease-linear delay-150 hover:text-orange-500'>
+                    <li className='px-4 uppercase transition duration-200 ease-linear delay-150 hover:text-orange-500'>
                         <Link to="/contact-us">
                             Contact us
                         </Link>
                     </li>
                 </ul>
                 {
-                    isFirstAsideOpen && <div className='w-full h-screen bg-[rgba(0,0,0,0.5)] fixed top-0 left-0'>
-                    <aside className='w-[250px] h-full bg-white absolute top-0 right-0 shadow-md z-[-1]'>
+                    isFirstAsideOpen && <div className='w-full h-screen bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 z-[20]'>
+                    <aside className={`w-[250px] h-full bg-white absolute top-0 right-0 transition-all duration-200 delay-200 ease-linear shadow-md ${isFirstAsideOpen ? "translate-x-0": "translate-x-full"}`}>
                         <div className='h-[60px] relative flex items-center justify-end'>
                             <button onClick={handleFirstAside} className='py-4 px-4'>
                                 <FontAwesomeIcon icon={faTimes} className='text-2xl' />
                             </button>
                         </div>
                         <ul className='w-full h-full'>
-                            <li className='px-4 py-3'>
-                                <Link to="/">
-                                    Home
+                            <li className='px-4 py-3 transition-all duration-200 ease-linear group hover:bg-orange-400 hover:text-white'>
+                                <Link to="/" className='flex justify-between items-center'>
+                                    <span>Home</span>
+                                    <span className='flex relative'>
+                                        <FontAwesomeIcon icon={faMinus} className='transition-all duration-200 ease-linear invisible group-hover:visible' />
+                                        <FontAwesomeIcon icon={faAngleRight} className='transition-all duration-200 ease-linear absolute left-0 group-hover:left-1/2' />
+                                    </span>
                                 </Link>
                             </li>
-                            <li className='px-4 py-3'>
-                                <button onClick={handleSecondAside} className='flex w-full justify-between items-center'>
+                            <li>
+                                <button onClick={handleSecondAside} className='px-4 py-3 flex w-full justify-between items-center transition-all duration-200 group ease-linear hover:bg-orange-500 hover:text-white'>
                                     <span className='inline-block'>
                                         Pages
                                     </span>
-                                    <span className='flex items-center'>
-                                        <FontAwesomeIcon icon={faAngleRight} />
+                                    <span className='flex relative'>
+                                        <FontAwesomeIcon icon={faMinus} className='transition-all duration-200 ease-linear invisible group-hover:visible' />
+                                        <FontAwesomeIcon icon={faAngleRight} className='transition-all duration-200 ease-linear absolute left-0 group-hover:left-1/2' />
                                     </span>
                                 </button>
-                                <aside className={`transition-all duration-200 ease-linear bg-white h-screen absolute top-0 left-0 w-full ${ isSecondAsideOpen ? "translate-x-0": "translate-x-full"}`}>
+                                <aside className={`transition-all duration-200 ease-linear bg-white h-screen absolute top-0 left-0 w-full ${ isSecondAsideOpen ? "translate-x-0": "translate-x-full"} z-50`}>
                                     <div className='h-[100px]'>
                                         <div className='h-1/2 flex justify-between'>
                                             <button onClick={handleSecondAside} className='px-4 py-2'>
@@ -172,16 +175,17 @@ const Navbar = () => {
                                     </ul>
                                 </aside>
                             </li>
-                            <li className='px-4 py-3'>
-                                <button onClick={handleThirdAside} className='w-full flex justify-between items-center'>
+                            <li>
+                                <button onClick={handleThirdAside} className='px-4 py-3 w-full flex justify-between items-center transition-all duration-200 ease-linear group hover:bg-orange-500 hover:text-white'>
                                     <span className='inline-block'>
                                         Shop
                                     </span>
-                                    <span className='flex items-center'>
-                                        <FontAwesomeIcon icon={faAngleRight} />
+                                    <span className='flex relative'>
+                                        <FontAwesomeIcon icon={faMinus} className='transition-all duration-200 ease-linear invisible group-hover:visible' />
+                                        <FontAwesomeIcon icon={faAngleRight} className='transition-all duration-200 ease-linear absolute left-0 group-hover:left-1/2' />
                                     </span>
                                 </button>
-                                <aside className={`transition-all duration-200 ease-linear w-full h-screen absolute top-0 left-0 bg-white ${isThirdAsideOpen ? "translate-x-0": "translate-x-full"}`}>
+                                <aside className={`transition-all duration-200 ease-linear w-full h-screen absolute top-0 left-0 bg-white ${isThirdAsideOpen ? "translate-x-0": "translate-x-full"} z-50`}>
                                     <div className='h-[100px]'>
                                         <div className='h-1/2 flex justify-between'>
                                             <button onClick={handleThirdAside} className='px-4 py-2'>
@@ -237,16 +241,20 @@ const Navbar = () => {
 
                                 </aside>
                             </li>
-                            <li className='px-4 py-3'>
-                                 <Link>
-                                     Contact
-                                 </Link>
+                            <li className='px-4 py-3 transition-all duration-200 ease-linear group hover:bg-orange-500 hover:text-white'>
+                            <Link to="/" className='flex justify-between items-center'>
+                                    <span>Contact</span>
+                                    <span className='flex relative'>
+                                        <FontAwesomeIcon icon={faMinus} className='transition-all duration-200 ease-linear invisible group-hover:visible' />
+                                        <FontAwesomeIcon icon={faAngleRight} className='transition-all duration-200 ease-linear absolute left-0 group-hover:left-1/2' />
+                                    </span>
+                                </Link>
                             </li>
                         </ul>
                     </aside>
                 </div>
                 }
-                <div className='hidden md:flex items-center gap-6 text-lg'>
+                <div className='hidden lg:flex items-center gap-6 text-lg'>
                     <button onClick={handleSearchDisplay} className='group'>
                         <FontAwesomeIcon icon={faSearch} className='transition-all duration-200 ease-linear delay-150 group-hover:text-orange-500' />
                     </button>
@@ -254,7 +262,7 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faShoppingCart} className='transition-all duration-200 ease-linear delay-150 group-hover:text-orange-500' />
                     </button>
                 </div>
-                <div className='flex justify-between items-center md:hidden'>
+                <div className='flex justify-between items-center lg:hidden'>
                     <button onClick={handleFirstAside} className='py-4'>
                         <FontAwesomeIcon icon={faBars} className='text-2xl' />
                     </button>

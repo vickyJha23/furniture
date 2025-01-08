@@ -4,10 +4,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: ["clamp"],
+
   theme: {
     extend: {
         fontFamily: {
             "nunito": ["Nunito", "serif"], 
+            "PlayFair": ["Playfair Display", "serif"]
         }
     },
   },
