@@ -6,11 +6,11 @@ import imagesCollection from '../assets/Images/images'
 
 const Hero = () => {
   return (
-    <section className='h-auto w-full transition-all duration-200 ease-linear'>
-      <div className='max-w-[120px] md:max-w-[144px] xl:max-w-[150px] absolute top-0 left-48'>
+    <section className='h-auto w-full bg-[#FAF7F2] transition-all duration-200 ease-linear container mx-auto'>
+      <div className='max-w-[120px] md:max-w-[144px] xl:max-w-[150px] absolute top-0 left-1/4'>
         <img src={imagesCollection.lightImage} alt="()" width="244" height="400" className='w-full h-full' />
       </div>
-      <div className='w-full h-full flex flex-col gap-10 justify-center md:flex-row px-4'>
+      <div className='w-full h-full flex flex-col gap-10 justify-center md:flex-row'>
         <div className='flex flex-col justify-center space-y-8 md:w-[65%] py-16 md:py-32'>
           <div className='w-full flex flex-col justify-center  gap-8 md:pr-[30%]'>
             <div className='w-full flex flex-col justify-center space-y-4'>

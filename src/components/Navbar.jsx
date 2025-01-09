@@ -45,8 +45,8 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='font-nunito flex items-center w-full py-6 mb-[80px] md:mb-[30px]'>
-            <section className='flex justify-between w-full items-center px-4'>
+        <nav className='font-nunito flex items-center w-full py-6 mb-[80px] md:mb-[30px] container mx-auto'>
+            <section className='flex justify-between w-full items-center'>
                 <Logo />
                 <ul className='hidden lg:flex items-center tracking-[3px] font-semibold text-lg'>
                     <li className='px-4 transition-all duration-200 uppercase ease-linear delay-150 hover:text-orange-500'>
@@ -268,8 +268,8 @@ const Navbar = () => {
                     </button>
                 </div>
             </section>
-            <section className={`h-screen w-full bg-[rgba(0,0,0,0.5)] transition-all duration-200 ease-linear delay-150 fixed inset-0 overflow-hidden ${isSearchOpen ? "visible" : "invisible"}`}>
-                <div className={`h-1/2 w-full bg-[#F6F0E6] transition-all duration-500 ease-linear grid place-items-center absolute ${isSearchOpen ? "!top-0" : "-top-full"}`}>
+            <section className={`h-screen w-full bg-[rgba(0,0,0,0.5)] transition-all duration-200 ease-linear delay-150 fixed z-50 inset-0 overflow-hidden ${isSearchOpen ? "visible" : "invisible"}`}>
+                <div className={`h-1/2 w-full bg-[#F6F0E6] transition-all duration-500 ease-linear grid place-items-center absolute z-40 ${isSearchOpen ? "!top-0" : "-top-full"}`}>
                     <div className='flex items-center bg-white w-96 border-2 border-yellow-500'>
                         <input type="text" className='w-[85%] px-4 py-3 outline-none' />
                         <button className='w-[15%] py-[14px] flex items-center justify-center'>
