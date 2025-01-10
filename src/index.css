@@ -13,16 +13,9 @@
          width:  clamp(7.5rem, 6.875rem + 3.125vw, 10.625rem);
      }
      .swiper-prev, .swiper-next{
-          border: 5px solid black;
-          width: 60px;
-          height: 60px;
-          position: absolute;
-          bottom: 550px;
-          left: 85%;
+          border: 3px solid black;
+          width: 50px;
+          height: 50px;
           transform: rotate(-45deg);
      }
-     .swiper-next{
-          left: 92%;
-     }
-     
 }
