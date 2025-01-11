@@ -5,7 +5,6 @@ import React from 'react';
 import MySwiper from './MySwiper';
 
 
-
 const Categories = () => {
   return (
     <div className='container mx-auto py-36 flex items-center relative z-0'>
