@@ -7,7 +7,7 @@ import MySwiper from './MySwiper';
 
 const Categories = () => {
   return (
-    <div className='container mx-auto py-36 flex items-center relative z-0'>
+    <section className='container mx-auto py-36 flex items-center relative z-0'>
       <div className='w-full flex flex-col justify-center'>
         <div className='max-w-[500px] space-y-4'>
             <p className='flex items-center gap-6'><span className='inline-block w-[12px] h-[12px] bg-orange-500 -rotate-45 shadow'></span> <span className='uppercase tracking-[2px] text-orange-500 font-nunito'>shop smart, shop sorted</span></p>
@@ -18,7 +18,7 @@ const Categories = () => {
         </div>
          <MySwiper />
       </div>
-    </div>
+    </section>
   )
 }
 

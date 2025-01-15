@@ -103,8 +103,8 @@ const Navbar = () => {
                     </li>
                 </ul>
                 {
-                    isFirstAsideOpen && <div className='w-full h-screen bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 z-[20]'>
-                    <aside className={`w-[250px] h-full bg-white absolute top-0 right-0 transition-all duration-200 delay-200 ease-linear shadow-md ${isFirstAsideOpen ? "translate-x-0": "translate-x-full"}`}>
+                    isFirstAsideOpen && <div className='w-full h-screen bg-[rgba(0,0,0,0.5)] fixed top-0 left-0 z-[50]'>
+                    <aside className={`w-[250px] h-full bg-white absolute top-0 right-0 transition-all duration-200 delay-200 ease-linear shadow-md z-50 ${isFirstAsideOpen ? "translate-x-0": "translate-x-full"}`}>
                         <div className='h-[60px] relative flex items-center justify-end'>
                             <button onClick={handleFirstAside} className='py-4 px-4'>
                                 <FontAwesomeIcon icon={faTimes} className='text-2xl' />

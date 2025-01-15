@@ -6,7 +6,7 @@ export default {
   ],
   safelist: ["clamp", "width-clamp", {
        pattern: /^swiper-/
-  }],
+  }, "custom-pagination"],
 
   theme: {
     extend: {
