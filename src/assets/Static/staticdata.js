@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     image: "https://furniforma.wpengine.com/wp-content/uploads/2024/12/FF-category-img-14.png",
     name: "Bench",
@@ -102,7 +102,70 @@ const products = [
     quantity: 25,
     price: 180,
     tags: ["new", "premium"]
+  },
+  {
+    image: "https://furniforma.wpengine.com/wp-content/uploads/2024/12/product-1.jpg",
+    name: "Outdoor Sofa",
+    category: "home",
+    quantity: 25,
+    price: 180,
+    tags: [""]
+  },
+  {
+    image: "https://furniforma.wpengine.com/wp-content/uploads/2024/12/product-2.jpg",
+    name: "Handmade Wooden Chair",
+    category: "home",
+    quantity: 25,
+    price: 180,
+    tags: [""]
+  },
+  {
+    image: "https://furniforma.wpengine.com/wp-content/uploads/2024/12/product-3.jpg",
+    name: "Decorative Light",
+    category: "home",
+    quantity: 25,
+    price: 180,
+    tags: [""]
+  },
+  {
+    image: "https://furniforma.wpengine.com/wp-content/uploads/2024/12/product-4.jpg",
+    name: "Cushion Lounge Chair",
+    category: "home",
+    quantity: 25,
+    price: 180,
+    tags: [""]
   }
 ];
 
-export default products;
+export const comments = [
+  {
+    id: 1,
+    productId: "101", // Product ID for reference
+    productName: "Modern Sofa",
+    author: "Priya Sharma",
+    text: "This sofa is very comfortable and matches my living room decor perfectly!",
+    rating: 5, // Rating out of 5
+    timestamp: "2025-01-16T09:30:00Z",
+    avatar: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBvcnRyYWl0fGVufDB8fDB8fHww", // URL of the person's image
+  },
+  {
+    id: 2,
+    productId: "102", // Product ID for reference
+    productName: "Wooden Dining Table",
+    author: "Aditi Verma",
+    text: "The table is sturdy and elegant. However, the delivery was delayed.",
+    rating: 4,
+    timestamp: "2025-01-15T14:45:00Z",
+    avatar: "https://plus.unsplash.com/premium_photo-1688350808212-4e6908a03925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBvcnRyYWl0fGVufDB8fDB8fHww",
+  },
+  {
+    id: 3,
+    productId: "101",
+    productName: "Modern Sofa",
+    author: "Riya Gupta",
+    text: "Great quality, but I feel it's a bit overpriced.",
+    rating: 3,
+    timestamp: "2025-01-16T10:15:00Z",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];

@@ -6,10 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 // here static data will be imported 
-import products from '../assets/Static/staticdata';
+import {products} from '../assets/Static/staticdata';
 import CategoryCard from './CategoryCard';
 
 const MySwiper = () => {
@@ -18,8 +17,7 @@ const MySwiper = () => {
       <Swiper modules={[Navigation]} spaceBetween={30} navigation={{
         nextEl: ".swiper-next",
         prevEl: ".swiper-prev",
-      }} onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')} className=' w-full !pt-5 select-none' breakpoints={{
+      }} className=' w-full !pt-5 select-none' breakpoints={{
           640: {
             slidesPerView: 2,
             spaceBetween: 20
@@ -41,7 +39,7 @@ const MySwiper = () => {
           <CategoryCard product={product} />
         </SwiperSlide>)}
       </Swiper>
-      <div className='w-full flex gap-10 justify-center items-center mt-8 md:mt-0 absolute -bottom-20 md:bottom-[450px] md:justify-end'>
+      <div className='w-full flex gap-10 justify-center items-center mt-8 md:mt-0 absolute -bottom-8 md:bottom-[500px] md:justify-end'>
         <div className='swiper-prev cursor-pointer flex justify-center items-center transition-all duration-200 ease-linear hover:text-orange-500 hover:border-orange-500'>
           <FontAwesomeIcon icon={faArrowLeft} className='text-3xl rotate-45' />
         </div>

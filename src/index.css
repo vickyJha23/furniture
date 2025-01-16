@@ -23,8 +23,8 @@
      }
      .swiper-pagination-bullet{
             background: #ccc !important;
-            width: 20px !important;
-            height: 20px !important;   
+            width: 15px !important;
+            height: 15px !important;   
             position:  relative !important;                
      }
      .swiper-pagination-bullet.swiper-pagination-bullet-active::after{
@@ -35,9 +35,8 @@
           top: 50%;
           left: 50%;
           border-radius: 50%;
-          background: red;
+          background: black;
           transform: translate(-50%,-50%);
-          border: 1px solid green;
      }  
       
 }

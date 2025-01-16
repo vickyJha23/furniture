@@ -70,8 +70,8 @@ const PremiumProductCard = ({product, isNew}) => {
          }
    }
   return (
-    <div className="relative  h-[450px]">
-      <div className="relative h-[70%] flex justify-center items-center  before:w-full before:-z-[1] before:h-full before:absolute before:top-0 before:left-0 before:bg-[#f9f9f9]">
+    <div className="relative z-[1] w-full  shadow-sm h-[450px] overflow-hidden">
+      <div className="relative w-full h-[70%] flex justify-center items-center  before:w-full before:-z-[1] before:h-full before:absolute before:top-0 before:left-0 before:bg-[#ccc]">
         <img
           src={product.image}
           alt="()"
@@ -88,7 +88,7 @@ const PremiumProductCard = ({product, isNew}) => {
         </div>
       </div>
       <motion.div
-        className="w-full h-full absolute top-0 left-0 cursor-pointer z-[1]"
+        className="w-full px-3 py-3 h-full absolute top-0 left-0 cursor-pointer z-[1]"
         whileHover="hover"
       >
          {isNew && <motion.div variants={newVariant} initial={{opacity: 1, scale: 1}} transition={{duration: 0.5, ease: "linear"}} className="w-[50px] h-[25px] bg-black text-white text-center">

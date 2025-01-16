@@ -12,7 +12,7 @@ import Hero from '../components/Hero';
 
 const Dashboard = () => {
     return (
-        <main className='select-none'>
+        <main className='select-none overflow-x-hidden'>
             <header className='bg-[#FAF8F2] w-full overflow-x-hidden'>
                 <div id="top-bar" className='bg-black h-[40px] w-full text-white text-sm font-nunito flex justify-center md:justify-between items-center '>
                     <div className='flex justify-center md:justify-between items-center container mx-auto'>

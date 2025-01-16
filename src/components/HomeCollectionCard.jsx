@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from "motion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
+
+
+
 const HomeCollectionCard = ({product}) => {
     const collectionCardChildrenVariant = {
          hover: {
@@ -63,7 +66,7 @@ const HomeCollectionCard = ({product}) => {
         <div className="h-[30%] py-5 px-3 flex flex-col gap-1">
           <p className="uppercase tracking-widest">stylish furniture</p>
           <h3 className="text-2xl font-semibold font-PlayFair">
-            Stylish Outdoor Sofa
+             {product.name}
           </h3>
           <p className="tracking-wider">6000 Rs</p>
         </div>

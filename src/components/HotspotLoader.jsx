@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 
 const HotspotLoader = () => {
   return (
-    <div className='hidden md:block container mx-auto relative' >
+    <div className='h-[350px] lg:h-auto md:block container mx-auto relative mt-[85px]' >
       <img src="https://furniforma.wpengine.com/wp-content/uploads/2024/12/Hostspot-banner-01-bg-2048x1016.jpg" alt="()" className='w-full h-full object-cover' />
-      <div className='bg-white transition-all duration-200 ease-linear absolute   md:top-2/3 lg:top-8 left-8 shadow'>
+      <div className='bg-white transition-all duration-200 ease-linear absolute top-[90%] -translate-y-full md:top-2/3 lg:!top-[220px] left-8 shadow'>
           <div className='px-5 py-2 w-full h-full'>
               <div className='flex lg:flex-row-reverse justify-start items-center w-full h-full'>
                   <div className='hidden lg:flex items-center'>

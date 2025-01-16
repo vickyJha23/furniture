@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 
-import products from '../assets/Static/staticdata';
+import { products } from '../assets/Static/staticdata';
 import HomeCollectionCard from './HomeCollectionCard';
 
 const HomeCollection = () => {
+   const [homeProduct, setHomeProduct] = useState(() => {
+          const homeProduct = products.filter((product) => product.category === "home");
+          return homeProduct;
+   }) 
+
+
   return (
-    <section className='px-6'>
+    <section className='px-6 py-[60px]'>
         <div>
              <p className='flex items-center gap-4'><span className='w-[12px] h-[12px] bg-orange-500 shadow -rotate-45'></span> <span className='uppercase
              tracking-[2px] text-orange-500'>Home Decors Furnitures</span></p>
@@ -36,14 +42,18 @@ const HomeCollection = () => {
                     },
                     768: {
                        slidesPerView: 2,
-                       spaceBetween: 20   
+                       spaceBetween: 30   
                     },
                     1024: {
-                       slidesPerView: 4,
-                       spaceBetween: 10    
+                       slidesPerView: 3,
+                       spaceBetween: 30    
+                    },
+                    1280: {
+                      slidesPerView: 4,
+                      spaceBetween: 30
                     }
                  }} cssMode={true} onSwiper={(swiper) => console.log(swiper) }    className='w-full h-full'>
-                      {products.map((product, index) => <SwiperSlide key={index}>
+                      {homeProduct.map((product, index) => <SwiperSlide key={index}>
                         <HomeCollectionCard  product={product} />
                       </SwiperSlide>)} 
                  </Swiper>

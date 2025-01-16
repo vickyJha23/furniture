@@ -13,7 +13,16 @@ export default {
         fontFamily: {
             "nunito": ["Nunito", "serif"], 
             "PlayFair": ["Playfair Display", "serif"]
+        },
+        screens: {
+              "max-xl": {
+                   max: "1280px"
+              },
+              "max-2xl": {
+                  max: "1580px"
+              }
         }
+        
     },
   },
   plugins: [],
