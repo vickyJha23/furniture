@@ -13,7 +13,8 @@ import Feedback from '../components/Feedback';
 
 const Home = () => {
   return( 
-       <section className='bg-[#FAF7F2] px-4 pb-[2000px]'>
+       <section className='w-full h-full'>
+        <div className='container mx-auto px-4'>
             <Categories />  
             <HotspotLoader />  
             <FlashProductSale/>
@@ -22,6 +23,7 @@ const Home = () => {
             <Subscribe />
             <MyMarquee />
             <Feedback />
+         </div>
         </section>
     )
 }

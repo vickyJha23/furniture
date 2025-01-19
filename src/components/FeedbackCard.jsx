@@ -4,9 +4,9 @@ import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 const FeedbackCard = ({comment}) => {
     return (
-        <div className='!container !mx-auto h-full px-6 grid lg:grid-cols-[auto,1fr] gap-8 lg:gap-16 items-center'>
+        <div className='transition-all duration-200 ease-linear w-full lg:max-w-[850px] xl:max-w-[1280px] mx-auto h-full px-6 grid lg:grid-cols-[auto,1fr] gap-8 lg:gap-16 items-center'>
             <div className='flex w-full flex-col space-y-4'>
-                <div className='bg-white p-3 w-full lg:w-[450px]'>
+                <div className='bg-white p-3 w-full lg:max-w-[250px] xl:max-w-[450px]'>
                     <img src="https://furniforma.wpengine.com/wp-content/uploads/2024/12/testimonial-img-01.jpg" alt="()" className='w-full h-full' />
                 </div>
                 <div className='space-y-3'>
@@ -19,10 +19,10 @@ const FeedbackCard = ({comment}) => {
                     <span className=''>
                         <FontAwesomeIcon color='#9E6647' icon={faQuoteRight} />
                     </span>
-                    <span className='hidden lg:block'>
-                        Feeback fuels Us
+                    <span className='hidden xl:block'>
+                        Feedback fuels Us
                     </span></h1>
-                <p className='text-sm !mt-4'>
+                <p className='text-sm max-w-[450px] !mt-4'>
                   {comment.text} Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium laboriosam doloremque magnam in aliquid repellat, dolor vel autem debitis a incidunt? Excepturi repellendus quidem doloremque dolorum accusantium obcaecati delectus corrupti labore ut? Excepturi hic cupiditate, quis repellendus libero eveniet.
                 </p>
                 <div className='flex items-center gap-5 !mt-6'>

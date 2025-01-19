@@ -9,10 +9,11 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 // Layouts and components are imported here
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import Footer from '../components/Footer';
 
 const Dashboard = () => {
     return (
-        <main className='select-none overflow-x-hidden'>
+        <main className='select-none overflow-x-hidden relative'>
             <header className='bg-[#FAF8F2] w-full overflow-x-hidden'>
                 <div id="top-bar" className='bg-black h-[40px] w-full text-white text-sm font-nunito flex justify-center md:justify-between items-center '>
                     <div className='flex justify-center md:justify-between items-center container mx-auto'>
@@ -39,15 +40,11 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <section className='relative h-full z-[1] px-4'>
-                    {/* navigation section  */}
-                    <Navbar />
-                    {/* Hero section  */}
-                    <Hero />
-                </section>
+                <Navbar />
             </header>
+             <Hero />
             <Outlet />
-
+            <Footer />
         </main>
     )
 }

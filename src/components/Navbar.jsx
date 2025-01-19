@@ -45,8 +45,8 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='font-nunito flex items-center w-full py-6 mb-[80px] md:mb-[30px] container mx-auto'>
-            <section className='flex justify-between w-full items-center'>
+        <nav className='font-nunito flex items-center w-full py-6 mb-[80px] md:mb-[30px]'>
+            <section className='container mx-auto flex justify-between w-full items-center px-4'>
                 <Logo />
                 <ul className='hidden lg:flex items-center tracking-[3px] font-semibold text-lg'>
                     <li className='px-4 transition-all duration-200 uppercase ease-linear delay-150 hover:text-orange-500'>

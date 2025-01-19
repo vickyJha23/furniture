@@ -26,9 +26,9 @@ const Subscribe = () => {
                 </p>
                <div className='flex border-2 border-black px-6'>
                    <input className='w-[70%] py-3 outline-none bg-transparent placeholder:text-black' type="email"  placeholder='Email'/>
-                   <button className='w-[30%] px-3 py-3 flex gap-2 items-center'>
+                   <button className='w-[30%] px-3 py-3 flex justify-center gap-2 items-center'>
                         <span className='capitalize tracking-widest'>subscribe</span>
-                        <span><FontAwesomeIcon icon={faCircleArrowRight} /></span>
+                        <span className='flex items-center'><FontAwesomeIcon icon={faCircleArrowRight} /></span>
                    </button>
                </div>
                <p className='text-sm text-center mx-auto max-w-[600px] lg:text-left lg:mx-0 lg:max-w-max'>*By submitting this form, you agree to receive Furiforma's email newsletter and promotional offers. <Link to = "" className='underline'>Terms and Condition</Link> Apply.</p>
