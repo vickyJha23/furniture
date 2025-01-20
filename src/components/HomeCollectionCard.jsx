@@ -74,7 +74,7 @@ const HomeCollectionCard = ({product}) => {
        <AnimatePresence>
           <motion.div className="absolute top-0 left-0 w-full h-full px-4 py-4 cursor-pointer"  whileHover="hover">
              <motion.div variants={collectionCardChildrenVariant} initial={{opacity: 0, scale: 0}}  transition={{duration: 0.5}} className="w-full h-full">
-                 <div className="w-full h-3/4 flex items-end">
+                 <div className="w-full h-[70%] flex items-end">
                       <motion.button className="bg-black text-white flex flex-col w-full items-center relative overflow-hidden py-6" variants={collectioncardButtonVariant} initial="initial" whileHover="hover">
                            <motion.span className="absolute capitalize tracking-[2px] font-semibold" variants={collectionCardChildrenOneVariant} initial={{top: "50%", y:"-50%" }} transition={{
                               duration: 0.5,

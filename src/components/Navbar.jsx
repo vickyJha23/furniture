@@ -45,8 +45,8 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='font-nunito flex items-center w-full py-6 mb-[80px] md:mb-[30px]'>
-            <section className='container mx-auto flex justify-between w-full items-center px-4'>
+        <nav className='font-nunito flex items-center w-full mb-[80px] md:mb-[30px]'>
+            <section className='container mx-auto h-[80px] flex justify-between w-full items-center px-4'>
                 <Logo />
                 <ul className='hidden lg:flex items-center tracking-[3px] font-semibold text-lg'>
                     <li className='px-4 transition-all duration-200 uppercase ease-linear delay-150 hover:text-orange-500'>
@@ -54,10 +54,10 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
-                    <li onClick={handleDropDown} className='px-4 relative uppercase ease-linear delay-150'>
+                    <li onClick={handleDropDown} className='px-4 uppercase ease-linear delay-150'>
                         <span className='transition-all duration-200 hover:text-orange-500'> Pages <FontAwesomeIcon icon={faChevronDown} /></span>
                         {
-                            isDropdownOpen && <ul className='absolute normal-case space-y-4 top-16 px-6 py-4 w-[200px] bg-white shadow border-t-[4px] border-t-orange-400'>
+                            isDropdownOpen && <ul className='absolute normal-case space-y-4 top-[110px] px-6 py-4 w-[200px] bg-white shadow border-t-[4px] border-t-orange-400 z-[50]'>
                                 <li className='text-sm flex items-center tracking-normal group transition-all duration-200 ease-linear align-middle'>
                                     <span className='transition-all duration-200 delay-150 ease-linear align-middle inline-block w-[8px] h-[8px] bg-orange-500 -rotate-[45deg] group-hover:w-0 group-hover:h-0'></span>
                                     <Link to="/about" className='transition-all duration-200 delay-150 ease-linear pl-3 group-hover:text-orange-500 group-hover:pl-0'>
