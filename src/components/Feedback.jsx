@@ -16,7 +16,7 @@ import FeedbackCard from './FeedbackCard.jsx';
 
 const Feedback = () => {
   return (
-    <section className='bg-[#F7F0EE] lg:h-[50vh] relative z-[1] flex items-center py-[60px] px-[30px]'>
+    <section className='bg-[#F7F0EE] lg:h-[60vh] relative z-[1] flex items-center py-[60px] px-[30px]'>
         <div className='w-full h-full relative z-[1]'>
          <Swiper className="mb-6 w-full h-full" modules={[Navigation, EffectFade]} loop={true} effect='fade' fadeEffect={{crossFade: true}} navigation={{
             nextEl: "#swiper-nextElm",

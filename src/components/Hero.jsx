@@ -1,10 +1,30 @@
 import React from 'react'
-
+import { useLocation } from 'react-router-dom'
 
 // static data import
 import imagesCollection from '../assets/Images/images'
 
 const Hero = () => {
+  const { pathname } = useLocation();
+  if(pathname.slice(1).includes("shop")){
+      return <section className='h-[50vh] grid place-items-center'>
+                  <div className='flex justify-center items-center'>
+                       <div className='flex flex-col gap-4 justify-center items-center'>
+                            <h3 className='font-PlayFair text-4xl capitalize font-bold tracking-widest'>{pathname.slice(1)}</h3>
+                             <p className='space-x-4'><span className='leading-0'>Home</span><span className='inline-block w-[8px] h-[8px] bg-black -rotate-45'></span><span className='capitalize leading-0'>{pathname.slice(1)}</span></p> 
+                       </div>
+                   </div> 
+                   <div style={{
+                      backgroundImage: "url('https://furniforma.wpengine.com/wp-content/uploads/2024/11/FF-Breadcrumb-Default-Img.jpg')",
+                      backgroundPosition: "center",
+                      backgroundRepeat:"no-repeat",
+                      backgroundSize: "cover",
+                   }} className='w-full h-full absolute top-0 left-0 -z-[1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-transparent after:z-0'>
+
+                   </div>
+             </section>
+   }
+
   return (
     <section className='w-full bg-[#FAF7F2] transition-all duration-200 ease-linear'>
       <article className='container mx-auto px-4'>

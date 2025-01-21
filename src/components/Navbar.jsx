@@ -45,7 +45,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='font-nunito flex items-center w-full mb-[80px] md:mb-[30px]'>
+        <nav className='font-nunito flex items-center w-full bg-transparent mb-[80px] md:mb-[30px]'>
             <section className='container mx-auto h-[80px] flex justify-between w-full items-center px-4'>
                 <Logo />
                 <ul className='hidden lg:flex items-center tracking-[3px] font-semibold text-lg'>

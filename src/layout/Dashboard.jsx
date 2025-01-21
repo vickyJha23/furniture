@@ -13,9 +13,9 @@ import Footer from '../components/Footer';
 
 const Dashboard = () => {
     return (
-        <main className='select-none overflow-x-hidden relative'>
-            <header className='bg-[#FAF8F2] w-full overflow-x-hidden'>
-                <div id="top-bar" className='bg-black h-[40px] w-full text-white text-sm font-nunito flex justify-center md:justify-between items-center '>
+        <main className='select-none overflow-x-hidden relative z-0 bg-[#FAF7F2]'>
+            <header className='bg-transparent w-full overflow-x-hidden relative'>
+                <div id="top-bar" className='bg-black h-[40px] w-full text-white text-sm font-nunito flex justify-center md:justify-between items-center px-4'>
                     <div className='flex justify-center md:justify-between items-center container mx-auto'>
                         <div className='hidden items-center gap-3 lg:flex'>
                             <Link to='/order-tracking'>Track Your Order</Link>
@@ -41,8 +41,8 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <Navbar />
+                <Hero />
             </header>
-             <Hero />
             <Outlet />
             <Footer />
         </main>
