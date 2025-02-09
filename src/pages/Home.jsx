@@ -11,6 +11,9 @@ import Subscribe from '../components/Subscribe';
 import MyMarquee from '../components/Marquee';
 import Feedback from '../components/Feedback';
 
+
+import { products } from '../assets/Static/staticdata';
+
 const Home = () => {
   return( 
        <section className='w-full h-full'>
@@ -18,8 +21,8 @@ const Home = () => {
             <Categories />  
             <HotspotLoader />  
             <FlashProductSale/>
-            <PremiusShowCase/>
-            <HomeCollection />
+            <PremiusShowCase products={products}/>
+            <HomeCollection products= {products} />
             <Subscribe />
             <MyMarquee />
             <Feedback />

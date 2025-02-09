@@ -14,13 +14,13 @@ const Map = () => {
       zoom={13}
       style={{ width: '100%', height: '250px' }}
       scrollWheelZoom={false}
+      className='!-z-10'
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; OpenStreetMap contributors"
       />
        <Marker position={[51.505, -0.09]}>
-
        </Marker>
     </MapContainer>
   );

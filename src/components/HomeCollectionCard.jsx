@@ -7,6 +7,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 const HomeCollectionCard = ({product}) => {
+    console.log(product)
     const collectionCardChildrenVariant = {
          hover: {
               opacity: 1,
@@ -58,7 +59,7 @@ const HomeCollectionCard = ({product}) => {
       <div className="h-full flex flex-col">
         <div className="h-[70%]">
           <img
-            src={product.image}
+            src={product.images[0]}
             alt=""
             className="w-full object-contain"
           />
@@ -68,7 +69,8 @@ const HomeCollectionCard = ({product}) => {
           <h3 className="text-2xl font-semibold font-PlayFair">
              {product.name}
           </h3>
-          <p className="tracking-wider">6000 Rs</p>
+          <p className="tracking-wider"><span className="line-through text-[#ccc] text-sm">{product.price.original}</span> <span>{
+              product.price.discounted} Rs</span></p>
         </div>
       </div>
        <AnimatePresence>

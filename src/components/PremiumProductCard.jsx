@@ -73,7 +73,7 @@ const PremiumProductCard = ({product, isNew}) => {
     <div className="relative z-[1] w-full  shadow-sm h-[450px] overflow-hidden">
       <div className="relative w-full h-[70%] flex justify-center items-center  before:w-full before:-z-[1] before:h-full before:absolute before:top-0 before:left-0 before:bg-[#ccc]">
         <img
-          src={product.image}
+          src={product.images[0]}
           alt="()"
           className="w-full h-full object-contain"
         />
@@ -82,9 +82,9 @@ const PremiumProductCard = ({product, isNew}) => {
         <h2 className="font-PlayFair font-bold text-2xl">
             {product.name}
         </h2>
-        <p className="tracking-widest">5000 Rs</p>
+        <p className="tracking-widest"> <span className="line-through text-[#ccc]">{product.price.original} Rs</span> <span className="text-black">{product.price.discounted} Rs</span></p>
         <div className="flex justify-center">
-          <StarRating rating={3} />
+          <StarRating rating={product.reviews.rating} />
         </div>
       </div>
       <motion.div

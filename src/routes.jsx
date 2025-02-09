@@ -6,6 +6,8 @@ import Dashboard from "./layout/Dashboard";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import Products from "./pages/Products";
+import Product from "./pages/Product";
+
 
 const router = createBrowserRouter([{
      path: "/",
@@ -19,6 +21,10 @@ const router = createBrowserRouter([{
          {
              path: "/shop",
              element: <Products />
+         },
+         {
+            path:"/product/:productId",  
+            element: <Product />
          }
      ]
 }])

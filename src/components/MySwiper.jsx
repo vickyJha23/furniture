@@ -8,10 +8,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // here static data will be imported 
-import {products} from '../assets/Static/staticdata';
 import CategoryCard from './CategoryCard';
 
-const MySwiper = () => {
+const MySwiper = ({products}) => {
   return (
     <div className='relative'>
       <Swiper modules={[Navigation]} spaceBetween={30} navigation={{
@@ -34,7 +33,7 @@ const MySwiper = () => {
             slidesPerView: 6,
             spaceBetween: 30
           }
-        }} cssMode={true} >
+        }}>
         {products.map((product, index) => <SwiperSlide className='w-full' key={index}>
           <CategoryCard product={product} />
         </SwiperSlide>)}

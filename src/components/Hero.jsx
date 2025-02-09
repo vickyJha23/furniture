@@ -6,11 +6,11 @@ import imagesCollection from '../assets/Images/images'
 
 const Hero = () => {
   const { pathname } = useLocation();
-  if(pathname.slice(1).includes("shop")){
+  if(pathname.slice(1) !== ""){
       return <section className='h-[50vh] grid place-items-center'>
                   <div className='flex justify-center items-center'>
                        <div className='flex flex-col gap-4 justify-center items-center'>
-                            <h3 className='font-PlayFair text-4xl capitalize font-bold tracking-widest'>{pathname.slice(1)}</h3>
+                            <h3 className='font-PlayFair text-4xl capitalize font-bold tracking-widest'>Shop</h3>
                              <p className='space-x-4'><span className='leading-0'>Home</span><span className='inline-block w-[8px] h-[8px] bg-black -rotate-45'></span><span className='capitalize leading-0'>{pathname.slice(1)}</span></p> 
                        </div>
                    </div> 

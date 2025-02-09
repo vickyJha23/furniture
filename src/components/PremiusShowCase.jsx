@@ -33,12 +33,11 @@ const PremiusShowCase = () => {
                    icon: faChartSimple
                 };
               }
-        }) 
+        }).sort((a, b) => a.tagName.localeCompare(b.tagName)); 
    })
-   console.log(tagsCategories);
    const [tags, setTags] = useState("premium");
    const [premiumProduct, setPremiumProduct] = useState(products.filter((product) => product.tags.includes(tags)));
-   const [activeIndex, setActiveIndex] = useState(1);
+   const [activeIndex, setActiveIndex] = useState(0);
    const handleTags = (content) => {
         setTags(content);
  }
@@ -50,15 +49,12 @@ const PremiusShowCase = () => {
      const handleTagsCategories = () => {
           let filteredPremiumProducts = products;
           if(tags.toLowerCase() !== "all furniture"){
-               console.log(tags);
                if(tags.toLowerCase() === "new arrival"){
                    filteredPremiumProducts = products.filter((product) => product.tags.includes(tags.replace("new arrival", "new")));
-                   console.log(filteredPremiumProducts);
                }   
                else {             
                     filteredPremiumProducts = products.filter((product) => product.tags.includes(tags))
                }
-          
           }
          return setPremiumProduct(filteredPremiumProducts);
      }  

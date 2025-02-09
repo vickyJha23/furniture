@@ -19,9 +19,12 @@ const SaleTimer = ({endTime}) => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setTimeLeft(calculateTimeLeft())
+             const updatedTime = calculateTimeLeft();
+            setTimeLeft(updatedTime);
+            if(!updatedTime){
+                  clearInterval(intervalId);      
+             }
         }, 1000);
-
         return () => clearInterval(intervalId);
     }, [endTime])
 
